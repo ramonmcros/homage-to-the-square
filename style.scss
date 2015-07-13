@@ -1,0 +1,221 @@
+@import 'normalize';
+
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+$cloud: #c5c5d0;
+$dark-cloud: darken($cloud, 40%);
+$darkest-cloud : darken($dark-cloud, 20%);
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: $dark-cloud;
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 18px;
+  padding: 0 24px;
+}
+
+p {
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+  color: $darkest-cloud;
+
+  &:hover {
+    border-bottom: 2px solid $darkest-cloud;
+    padding-bottom: 1px;
+  }
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 50%;
+  padding: 40px 0 40px 15px;
+
+  @media all and (max-width: 900px) {
+    width: 100%;
+    padding: 40px 0;
+  }
+
+  @media all and (max-width: 500px) {
+    padding: 15px 0;
+    font-size: 16px;
+  }
+}
+
+.title {
+  display: block;
+  width: 100%;
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.group {
+  border: none;
+  padding: 15px;
+  width: 50%;
+  margin: 0 0 10px;
+
+  legend {
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+  }
+
+  input {
+    display: block;
+  }
+
+  label {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+
+    &[for*="hue"] {
+      margin-top: 0;
+    }
+  }
+}
+
+#homage {
+  width: 50%;
+  padding: 40px 15px;
+  float: left;
+
+  @media all and (max-width: 900px) {
+    width: 100%;
+    float: none;
+    max-width: 632px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  @media all and (max-width: 500px) {
+    padding: 15px 0;
+  }
+}
+
+.save {
+  margin: 30px 0;
+  color: white;
+  background-color: $dark-cloud;
+  padding: 10px 25px;
+  text-decoration: none;
+  text-align: center;
+
+  &:hover {
+    background: $darkest-cloud;
+  }
+
+  @media all and (max-width: 500px) {
+    margin-top: 0;
+  }
+}
+
+/* *
+ * Sliders
+ */
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%; /* Specific width is required for Firefox. */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-ms-track {
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+  margin: 10px 0;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  background: $dark-cloud;
+  margin-top: -3px;
+
+}
+
+input[type=range]:active::-webkit-slider-thumb {
+  height: 15px;
+  width: 15px;
+  margin-top: -6px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: $cloud;
+  margin: 10px 0;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: $cloud;
+}
+
+input[type=range]::-moz-range-thumb {
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  background: $dark-cloud;
+  border: none;
+}
+
+input[type=range]:active::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+}
+
+input[type=range]::-moz-range-track {
+  background-color: $cloud;
+  height: 3px;
+}
+
+input[type=range]::-ms-thumb {
+  height: 9px;
+  width: 9px;
+  background: $dark-cloud;
+  border: none;
+  border-radius: 50%;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: $cloud;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: $cloud;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background-color: $cloud;
+}
+input[type=range]::-ms-fill-upper {
+  background-color: $cloud;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background-color: $cloud;
+}

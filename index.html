@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Homage to the Square</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="js/custom.js" charset="utf-8"></script>
+</head>
+<body>
+  <h1 class="title">Homage to the Square</h1>
+  <p>
+    Based on the series of paintings by
+    <a class="link" href="https://en.wikipedia.org/wiki/Josef_Albers">Josef Albers</a>.
+  </p>
+  <p>
+    <a class="link" href="http://codepen.io/ramonmcros/pen/yNEeNo">CodePen</a> ||
+    <a class="link" href="http://ramonmcros.github.io/homage-to-the-square/">GitHub</a>
+  </p>
+  <canvas id="homage" width="632" height="632"></canvas>
+  <form class="controls">
+    <fieldset class="group" action="index.html" method="post">
+      <legend>First Square</legend>
+      <label for="first-hue">Hue</label>
+      <input type="range" id="first-hue" name="first-hue" min="0" value="7" max="360">
+      <label for="first-saturation">Saturation</label>
+      <input type="range" id="first-saturation" name="first-saturation" min="0" value="66" max="100">
+      <label for="first-lightness">Lightness</label>
+      <input type="range" id="first-lightness" name="first-lightness" min="0" value="82" max="100">
+    </fieldset>
+    <fieldset class="group" action="index.html" method="post">
+      <legend>Second Square</legend>
+      <label for="second-hue">Hue</label>
+      <input type="range" id="second-hue" name="second-hue" min="0" value="21" max="360">
+      <label for="second-saturation">Saturation</label>
+      <input type="range" id="second-saturation" name="second-saturation" min="0" value="98" max="100">
+      <label for="second-lightness">Lightness</label>
+      <input type="range" id="second-lightness" name="second-lightness" min="0" value="68" max="100">
+    </fieldset>
+    <fieldset class="group" action="index.html" method="post">
+      <legend>Third Square</legend>
+      <label for="third-hue">Hue</label>
+      <input type="range" id="third-hue" name="third-hue" min="0" value="27" max="360">
+      <label for="third-saturation">Saturation</label>
+      <input type="range" id="third-saturation" name="third-saturation" min="0" value="99" max="100">
+      <label for="third-lightness">Lightness</label>
+      <input type="range" id="third-lightness" name="third-lightness" min="0" value="58" max="100">
+    </fieldset>
+    <fieldset class="group" action="index.html" method="post">
+      <legend>Fourth Square</legend>
+      <label for="fourth-hue">Hue</label>
+      <input type="range" id="fourth-hue" name="fourth-hue" min="0" value="23" max="360">
+      <label for="fourth-saturation">Saturation</label>
+      <input type="range" id="fourth-saturation" name="fourth-saturation" min="0" value="99" max="100">
+      <label for="fourth-lightness">Lightness</label>
+      <input type="range" id="fourth-lightness" name="fourth-lightness" min="0" value="57" max="100">
+    </fieldset>
+    <a href="#" id="save" class="save">Save</a>
+  </form>
+</body>
+</html>
